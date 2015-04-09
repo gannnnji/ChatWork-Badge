@@ -1,0 +1,31 @@
+{
+	"name": "ChatWork Badge",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "ChatWork Badge",
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"browser_action": {
+		"default_icon": "icons/16.png"
+	},
+	"background": {
+		"scripts": [
+			"lib/jquery-2.1.3.min.js",
+			"background.js"
+		],
+		"pages": ["background.html"]
+	},
+	"options_ui": {
+		"page": "page/options.html",
+		"chrome_style": true
+	},
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.chatwork.com/"
+	]
+}
